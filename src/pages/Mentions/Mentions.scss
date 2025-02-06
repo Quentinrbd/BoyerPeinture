@@ -1,0 +1,17 @@
+.mentions {
+    text-align: center;
+    margin: auto;
+    max-width: 900px;   
+
+    h1 {
+        // font-size: 30px;
+        padding: 30px;
+        color: #19a7ce;
+    }
+}
+
+@media (orientation: portrait) {
+    .mentions {
+        margin: auto 50px;
+    }
+}

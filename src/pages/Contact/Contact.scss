@@ -1,0 +1,135 @@
+.formulaire {
+  position: relative;
+    margin: 80px auto;
+    width: fit-content;
+    height: 54vh;
+    height: fit-content;
+    padding: 20px 40px;
+    border-radius: 10px;
+    background-color: #AFD3E2;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;    
+
+    h1 {
+        text-align: center;
+    }
+
+    #envelop {
+      height: 100px;
+      margin: auto;
+      display: flex;
+      color: rgb(216, 48, 48);
+    }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  padding: 10px 0;
+}
+
+input {
+  border: 1px solid #19a7ce;
+  height: 30px;
+  border-radius: 8px;
+  width: 300px;
+  font-size: 18px;
+  padding: 6px;
+}
+
+textarea {
+  border: 1px solid #19a7ce;
+  border-radius: 8px;
+  width: 500px;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  padding: 6px;
+}
+
+.button {
+  margin: 30px auto;
+  padding: 10px 20px;    
+  height: fit-content;
+  position: relative;
+  border: none;
+  transition: all 1s;
+  cursor: pointer;
+  background-color: #19a7ce;
+  border-radius: 10px;
+  font-size: 17px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+
+    img {
+      position: absolute;
+      width: 30px;
+      opacity: 0;
+    }
+}
+
+.button.active {
+  height: 40px;
+  background-color: #48cf53;
+  padding: 25px;
+  border-radius: 50%;
+  width: 40px;
+  transition: all 1s;
+
+  #btn-text {
+    opacity: 0;
+    position: absolute;
+  }
+
+  img{
+    opacity: 1;
+    position: absolute; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s all;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+} 
+
+.error {
+  color: white;
+  background-color: #da4949;
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+#bucket{
+  position: absolute;
+  left: -6%;
+  top: -9%;
+  width: 100px;
+}
+
+@media (max-width: 540px) {
+  .formulaire {
+    padding: 10px 20px;
+    margin: 40px auto;
+  }
+  
+  input {
+    width: 250px;
+  }
+
+  textarea {
+    width: 300px;
+  }
+
+  #bucket {
+    width: 60px;
+    top: -5%;
+    left: -5%;
+  }
+}

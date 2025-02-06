@@ -1,0 +1,73 @@
+@import '../../partials';
+
+.contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $cream;
+    color: $darkblue;
+
+    h1 {
+        text-align: center;
+    }
+
+    .btn-contact {
+        padding: 10px 15px;
+        background-color: $darkblue;        
+        color: white;
+        text-decoration: none;
+        border-radius: 20px;
+        margin: 15px auto;
+    }
+
+    .btn-contact:hover {
+        background-color: $semiblue;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    }
+
+    .coordonnees {
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .copyright {
+        position: relative;
+        height: 25px;
+        background-color: #191919;
+        color: white;
+    }
+
+    #copyright {
+        width: 100%;
+        margin: 0;
+        // text-align: center;
+        font-size: 13px;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        text-align: center;
+    }
+
+    span {
+        text-align: center;
+        font-size: 11px;
+    }
+
+    @media (max-width: 540px) {
+        .copyright {
+            height: 70px;
+        }
+    }
+
+    @media (min-width: 541px) and (max-width: 820px) {
+        .copyright {
+            height: 50px;
+        }
+    }
+}

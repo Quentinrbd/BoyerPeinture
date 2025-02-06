@@ -1,0 +1,114 @@
+@import '../../partials';
+
+#h1-rea {
+    text-align: center;
+}
+
+.interieur-rea h2 {
+    padding-top: 35px;
+}
+
+.interieur-rea, .exterieur-rea, .boiserie, .sol, .escaliers {
+    h2 {
+        margin-left: 110px;
+        color: $semiblue;
+    }
+}
+
+.interieur-content, .exterieur-content, .boiserie-content, .sol-content, .escaliers-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 40px;
+    margin: 50px 10vh 50px 10vh;
+    justify-items: center;
+    
+    img {
+        width: 380px;
+        height: 500px;
+        cursor: pointer;
+    }
+}
+
+.modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.877);
+    transition:opacity 0.4s ease;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    overflow: hidden;
+    z-index: 10;
+}
+
+.modal.open {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modal img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    display: block;
+    line-height: 0;
+    box-sizing: border-box;
+    padding: 50px 0 50px;
+    margin: 0 auto;
+}
+
+.modal.open span {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 50px;
+}
+
+@media (max-width: 750px) {
+    .interieur-content, .exterieur-content, .boiserie-content, .sol-content, .escaliers-content {
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+
+        img {
+            width: 300px;
+            height: 400px;
+        }
+    }
+    .interieur-rea, .exterieur-rea, .boiserie, .sol, .escaliers {
+        h2 {
+            text-align: center !important;
+            margin: auto;
+            max-width: 200px;
+            color: $semiblue;
+        }
+    }
+  }
+@media (min-width:751px) and (max-width: 1010px) {
+    .interieur-content, .exterieur-content, .boiserie-content, .sol-content, .escaliers-content {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+
+        img {
+            width: 320px;
+            height: 420px;
+        }
+    }
+  }
+
+@media (min-width: 1011px) and (max-width: 1550px) {
+    .interieur-content, .exterieur-content, .boiserie-content, .sol-content, .escaliers-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
