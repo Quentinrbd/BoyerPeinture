@@ -13,7 +13,7 @@ const sliderData = [
     },
     {
       id: 4,
-      description: "Parquet"
+      description: "Parquetsssss"
     },
   ]
   export default sliderData;

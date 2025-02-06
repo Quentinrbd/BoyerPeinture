@@ -3,7 +3,6 @@ import HeaderEntreprise from "../../components/Header/HeaderOther"
 import Footer from "../../components/Footer/Footer"
 import Image1 from "../../assets/manu.jpg"
 import Image2 from "../../assets/boyer.png"
-
 import {motion} from "framer-motion"
 
 import { scrollTop } from "../../hooks/scrollTop"
@@ -48,6 +47,7 @@ export default function Entreprise() {
       </div>
       
       <Footer/>
+      
     </>
   )
 }

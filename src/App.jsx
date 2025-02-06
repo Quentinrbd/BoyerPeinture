@@ -3,6 +3,7 @@ import Entreprise from './pages/Entreprise/Entreprise'
 import Realisation from './pages/Realisation/Realisation'
 import Contact from './pages/Contact/Contact'
 import Mentions from './pages/Mentions/Mentions'
+import Test from './pages/Test'
 import {RouterProvider, createBrowserRouter} from "react-router-dom"
 
 
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: '/mentions',
     element: <Mentions/> 
+  },
+  {
+    path: '/Test',
+    element: <Test/> 
   },
 ])
 
