@@ -16,24 +16,87 @@ export default function Realisation() {
       setModal(true)
     }
 
+      const categories = [
+    "voir tout",
+    "interieur",
+    "exterieur",
+    "escalier",
+    "boiserie",
+    "sol"
+  ];   
+
     const interieur = ReaData.filter((reaInterieur) => reaInterieur.categorie === 'interieur')
     const boiserie = ReaData.filter((reaBoiserie) => reaBoiserie.categorie === 'boiserie')
     const escalier = ReaData.filter((reaEscalier) => reaEscalier.categorie === 'escalier')
     const sol = ReaData.filter((reaSol) => reaSol.categorie === 'sol')
     const exterieur = ReaData.filter((reaExterieur) => reaExterieur.categorie === 'exterieur')
 
+    const [activeCategory, setActiveCategory] = useState("voir tout")
+
+    const filteredPhotos =
+    activeCategory === "voir tout" ? ReaData : ReaData.filter((photo) => photo.categorie === activeCategory) 
+
+
     scrollTop(0,0)    
   return (
     <>
-        <HeaderRealisation />
+        <HeaderRealisation />    
 
         <h1 id="h1-rea">Nos réalisations</h1>
-        <div className={modal ? 'modal open' : 'modal'}>
+
+          {/* <div className="category">
+            <ul>
+              <li>Voir tout</li>
+              <li>Intérieur</li>
+              <li>Extérieur</li>
+              <li>Escalier</li>
+              <li>Boiserie</li>
+              <li>Sol</li>
+            </ul>
+          </div> */}
+
+           <div className="category">
+        <ul>
+          {categories.map((cat) => (
+            <li
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={activeCategory === cat ? "active" : ""}
+              style={{ cursor: "pointer" }}
+            >
+              {cat.charAt(0).toUpperCase() + cat.slice(1)}
+
+              {console.log("activeCategory:", activeCategory)}
+              {console.log("filteredPhotos:", filteredPhotos)}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+        {/* <div className={modal ? 'modal open' : 'modal'}>
           <img src={tempImgSrc} alt="" />
           <span onClick={() => setModal(false)}>&times;</span>
-        </div>
+        </div> */}
 
-        <div className="interieur-rea">
+         <div className="gallery">
+        {filteredPhotos.map((photo,index) => (
+          <motion.div
+           whileHover={{
+                  scale: 1.1,
+                  transition: { duration: 0.3},
+                }}
+                key={index} onClick={() => getIMG(rea.imgSrc)}>
+            <img
+              key={photo.id}
+              src={photo.imgSrc}
+              alt={photo.alt}
+              className="photo"
+            />
+          </motion.div>
+        ))}
+      </div>
+
+        {/* <div className="interieur-rea">
           <h2>Peintures intérieures et papiers peints</h2>
           <div className="interieur-content">
           {interieur.map((rea, index) => {
@@ -121,7 +184,7 @@ export default function Realisation() {
               )
             })}
           </div>
-        </div>
+        </div> */}
         <Footer/>
     </>
   )
