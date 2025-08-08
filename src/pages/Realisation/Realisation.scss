@@ -109,6 +109,11 @@
     margin-right: 25px;
     overflow: scroll;
   }
+
+  .box-content img {
+  height: 540px;
+  border-radius: 5px;
+}
 }
 
 @media screen and (min-width: 613px) and (max-width: 992px) {
