@@ -22,7 +22,7 @@ export default function Footer() {
                   </div>
                     
                 <div className="copyright">
-                  <p id="copyright">©2024. Tous droits réservés Boyer Peinture - 
+                  <p id="copyright">©2025. Tous droits réservés Boyer Peinture - 
                   <Link to="/mentions" style={{color:"#19A7CE", fontSize:"13px"}}> Mentions légales </Link> -
                    Création du site par <a href="https://quentin-ribardiere.com/" target="_blank" style={{color:"#19A7CE"}}> Quentin Ribardière - développement web.</a></p>
                 </div>
