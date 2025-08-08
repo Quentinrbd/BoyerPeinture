@@ -15,7 +15,6 @@ export default function Realisation() {
       "voir tout",
       "intérieur",
       "extérieur",
-      "escalier",
       "boiserie",
       "sol",
       "avant/après"

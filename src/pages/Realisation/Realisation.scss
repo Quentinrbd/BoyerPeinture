@@ -36,7 +36,7 @@
     
     img {
         width: 300px;
-        height: 300px;
+        height: 350px;
         cursor: pointer;
         object-fit: cover;
         border-radius: 5px;
@@ -52,10 +52,9 @@
 .desc {
     max-width: 280px;
     text-align: center;
-    font-size: 14px;
+    font-size: 15px;
     color: rgba(0, 0, 0, 0.842);
 }
-
 
 .box {
   position: fixed;
